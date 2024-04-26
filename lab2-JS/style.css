@@ -1,5 +1,24 @@
+:root {
+    --primary: #D05353;
+    --secondary: #E58F65;
+    --neutral: #F1E8B8;
+    --hover: #F9E784;
+    --white: #FFFFFF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+}
+
 .unordered-list {
     list-style-type: none;
+    font-size: 24px;
+    color: var(--secondary);
 }
 
 .checked {
@@ -10,4 +29,64 @@
 .date {
     color:black;
     text-decoration: none;
+}
+
+.title-section{
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#main-headline {
+    font-size: 48px;
+    font-style: italic;
+    color: var(--primary);
+}
+
+.list-section{
+    background-color: var(--neutral);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    row-gap: 16px;
+    align-items: center;
+}
+
+.labels{
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.inputs{
+    width: 40%;
+    padding: 8px;
+    border-radius: 32px;
+    font-size: 16px;
+}
+
+.buttons{
+    padding: 8px 24px;
+    background-color: var(--secondary);
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.x-buttons{
+    padding: 8px 18px;
+    background-color: var(--primary);
+    font-size: 12px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkboxes{
+    cursor: pointer;
 }

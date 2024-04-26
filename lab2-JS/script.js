@@ -12,6 +12,8 @@ addBtn.onclick = () => {
         const listItem = document.createElement("li");
         const checkbox = document.createElement("input");
         const xBtn = document.createElement("button");
+        xBtn.classList.add("x-buttons");
+        checkbox.classList.add("checkboxes");
         const itemString = document.createElement("span");
         checkbox.type = "checkbox";
         xBtn.innerText = "X";
@@ -43,9 +45,10 @@ addBtn.onclick = () => {
             }
         });
 
-        listItem.addEventListener("click", (event) => {
-            const listItem = event.target;
-            const checkbox = event.target.querySelector("input[type='checkbox']");
+        itemString.addEventListener("click", (event) => {
+            const itemString = event.target;
+            const listItem = event.target.parentElement;
+            const checkbox = listItem.querySelector("input[type='checkbox']");
             checkbox.checked = !checkbox.checked;
 
             if(checkbox.checked) {

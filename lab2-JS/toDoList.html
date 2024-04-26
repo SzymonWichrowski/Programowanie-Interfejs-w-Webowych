@@ -8,15 +8,19 @@
         <title>ToDo List</title>
     </head>
     <body>
-        <h1>ToDo List</h1>
-        <label for="newItem">new: </label>
-        <input placeholder="new" id="newItem"><br><br>
-        <button id="addBtn">add</button><br>
-        <h2>List: </h2>
-        <ul id="list" class="unordered-list">
-        </ul>
-        <br>
-        <button id="restoreBtn">restore</button>
+        <section class="title-section">
+            <p id="main-headline">ToDo List</p>
+        </section>
+        <section class="list-section">
+            <label class="labels" for="newItem">new task: </label>
+            <input class="inputs" placeholder="new" id="newItem">
+            <button class="buttons" id="addBtn">add</button>
+            <p class="labels">List of your tasks: </p>
+            <ul id="list" class="unordered-list">
+            </ul>
+            <br>
+            <button class="buttons" id="restoreBtn">restore</button>
+        </section>
         <dialog>
             <h2 id="modal-text">Are you sure you want to delete the task with the following content?: </h2>
             <button id="confirmBtn">confirm</button>
