@@ -12,11 +12,13 @@ addBtn.onclick = () => {
         const listItem = document.createElement("li");
         const checkbox = document.createElement("input");
         const xBtn = document.createElement("button");
+        const itemString = document.createElement("span");
         checkbox.type = "checkbox";
         xBtn.innerText = "X";
+        itemString.innerText = newItem.value;
         listItem.appendChild(xBtn);
         listItem.appendChild(checkbox);
-        listItem.append(newItem.value);
+        listItem.appendChild(itemString);
         list.appendChild(listItem);
         newItem.value = "";
 
@@ -69,7 +71,9 @@ addBtn.onclick = () => {
             current = listItem;
             const modal = document.getElementsByTagName("dialog")[0];
             const modalText = document.getElementById("modal-text");
-            modalText.append(listItem.innerText);
+            const modalItem = document.createElement("span");
+            modalItem.innerText = listItem.querySelector("span").innerText;
+            modalText.appendChild(modalItem);
             modal.showModal();
         })
     }
@@ -89,6 +93,9 @@ window.onload = () => {
     cancelBtn.addEventListener("click", () => {
       const modal = document.getElementsByTagName("dialog")[0];
       modal.close();
+      const modalText = document.getElementById("modal-text");
+      const modalItem = modalText.querySelector("span");
+      modalText.removeChild(modalItem);
     });
 
     confirmBtn.addEventListener("click", () => {
@@ -96,6 +103,9 @@ window.onload = () => {
         current.remove();
         const modal = document.getElementsByTagName("dialog")[0];
         modal.close();
+        const modalText = document.getElementById("modal-text");
+        const modalItem = modalText.querySelector("span");
+        modalText.removeChild(modalItem);
     })
 
 }
