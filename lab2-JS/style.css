@@ -1,0 +1,13 @@
+.unordered-list {
+    list-style-type: none;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.date {
+    color:black;
+    text-decoration: none;
+}

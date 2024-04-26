@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css"/>
+        <title>ToDo List</title>
+    </head>
+    <body>
+        <h1>ToDo List</h1>
+        <label for="newItem">new: </label>
+        <input placeholder="new" id="newItem"><br><br>
+        <button id="addBtn">add</button><br>
+        <h2>List: </h2>
+        <ul id="list" class="unordered-list">
+        </ul>
+        <br>
+        <button id="restoreBtn">restore</button>
+        <dialog>
+            <h2 id="modal-text">Are you sure you want to delete the task with the following content?: </h2>
+            <button id="confirmBtn">confirm</button>
+            <button id="cancelBtn">cancel</button>
+        </dialog>
+        <script src="./script.js"></script>
+    </body>
+</html>
