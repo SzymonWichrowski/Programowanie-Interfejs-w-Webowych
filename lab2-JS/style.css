@@ -19,6 +19,7 @@ body {
     list-style-type: none;
     font-size: 24px;
     color: var(--secondary);
+    cursor: pointer;
 }
 
 .checked {
@@ -78,6 +79,10 @@ body {
     align-items: center;
 }
 
+.buttons:hover{
+    background-color: var(--hover);
+}
+
 .x-buttons{
     padding: 8px 18px;
     background-color: var(--primary);
@@ -87,6 +92,28 @@ body {
     align-items: center;
 }
 
+.x-buttons:hover{
+    background-color: var(--hover);
+}
+
 .checkboxes{
     cursor: pointer;
+}
+
+.modal{
+    background-color: var(--secondary);
+}
+
+.modal-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.modal-buttons>.buttons{
+    background-color: var(--neutral);
+}
+
+.modal-buttons>.buttons:hover{
+    background-color: var(--hover);
 }
