@@ -1,3 +1,4 @@
+import React from 'react';
 import HotelCards from '../Card/HotelCards.jsx'
 
 

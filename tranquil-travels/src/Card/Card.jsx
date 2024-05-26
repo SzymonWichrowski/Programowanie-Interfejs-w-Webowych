@@ -1,6 +1,13 @@
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Card(props) {
+
+    const navigate = useNavigate();
+
+    const handleViewOffer = () => {
+        navigate(`/hotel/${props.id}`);
+      }
 
     return(
         <article className="hotel-card">
@@ -14,7 +21,7 @@ function Card(props) {
                 <p className="text-large">{props.price}</p>
             </div>
             <div className="hotel-card-buttons">
-                <button className="button primary"> View offer <img src="/Arrow.svg"></img></button>
+                <button className="button primary" onClick={handleViewOffer}> View offer <img src="/Arrow.svg"></img></button>
                 <button className="button primary"> Edit <img src="/Pencil.svg"></img></button>
             </div>
         </article>
@@ -22,6 +29,7 @@ function Card(props) {
 }
 
 Card.defaultProps = {
+    id: 0,
     city: "City",
     hotel: "Hotel",
     description: "description",

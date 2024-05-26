@@ -140,6 +140,20 @@ body{
     grid-column: 10/13;
 }
 
+.hotel-card:nth-child(1)>.card-image{
+    background-image: url(/cards1.jpg);
+}
+
+.hotel-card:nth-child(2)>.card-image{
+    background-image: url(/cards2.jpg);
+}
+.hotel-card:nth-child(3)>.card-image{
+    background-image: url(/cards3.jpg);
+}
+.hotel-card:nth-child(4)>.card-image{
+    background-image: url(/cards4.jpg);
+}
+
 .chip{
     background-color: var(--white);
     padding: 8px 16px;
