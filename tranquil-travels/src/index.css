@@ -202,16 +202,19 @@ body{
     height: 100vh;
 }
 
-.hotel-image-large{
-    border-radius: var(--radius-large);
+.hotel-image-large-container{
     grid-column: 1/6;
     display: flex;
     flex-direction: column;
-    background-image: url(/cards2.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
+
+.hotel-image-large{
+    border-radius: var(--radius-large);
+    height: 100%;
+}
+    
 
 .hotel-page-details{
     grid-column: 7/13;
@@ -242,8 +245,15 @@ body{
     row-gap: 12px;
 }
 
-.hotel-page-images>.card-image{
-    background-image: url(/cards2.jpg);
+.hotel-page-image-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-page-image{
+    border-radius: var(--radius-medium);
+    max-height: 350px;
+    width: 100%;
 }
 
 

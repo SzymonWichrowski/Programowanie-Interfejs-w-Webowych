@@ -28,13 +28,4 @@ function Card(props) {
     );
 }
 
-Card.defaultProps = {
-    id: 0,
-    city: "City",
-    hotel: "Hotel",
-    description: "description",
-    rating: "stars",
-    price: "money/night",
-}
-
 export default Card
