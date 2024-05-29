@@ -4,6 +4,7 @@ import Navbar from './Navbar/Navbar.jsx'
 import Title from './Title/Title.jsx'
 import Browse from './Browse/Browse.jsx'
 import HotelPage from './HotelPage/HotelPage.jsx';
+import AddOffersPage from './AddOffers/AddOffersPage.jsx';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             } 
           />
           <Route path="/hotel/:id" element={<HotelPage />} />
+          <Route path='/add-offers' element={<AddOffersPage/>} />
         </Routes>
       </Router>
     </>

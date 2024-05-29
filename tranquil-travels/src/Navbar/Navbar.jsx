@@ -1,6 +1,5 @@
 import styles from './Navbar.module.css'
 
-
 function Navbar() {
 
     return(
@@ -9,8 +8,8 @@ function Navbar() {
             <ul className={styles.navLinks}>
                 <li><a className={`hover ${styles.navLink}`} href="#">Home</a></li>
                 <li><a className={`hover ${styles.navLink}`} href="#">Find offers</a></li>
-                <li><a className={`hover ${styles.navLink}`} href="#">Add new offers</a></li>
-                <li><a className={`hover ${styles.navLink}`} href="#">My offers</a></li>
+                <li><a className={`hover ${styles.navLink}`} href="/add-offers">Add new offers</a></li>
+                <li><a className={`hover ${styles.navLink}`} href="/">My offers</a></li>
                 <li><a className={`hover ${styles.navLink}`} href="#">Favorites</a></li>
                 <button className="button primary"> Log in</button>
             </ul>

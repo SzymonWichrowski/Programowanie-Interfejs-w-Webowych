@@ -56,9 +56,20 @@ body{
     border-radius: var(--radius-verylarge);
 }
 
+.secondary {
+    background-color: var(--primary-dark);
+    color: var(--neutral);
+    border-radius: var(--radius-verylarge);
+}
+
 .primary:hover{
     background-color: var(--hover);
     color: var(--neutral);
+}
+
+.secondary:hover{
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
 }
 
 .title-large{
@@ -256,6 +267,59 @@ body{
     width: 100%;
 }
 
+/* Add offers */
+
+.add-section{
+    background-color: var(--neutral);
+    align-items: center;
+    min-height: 100vh
+}
+
+.add-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px;
+}
+
+.add-form-columns{
+    display: flex;
+    flex-direction: row;
+    column-gap: 150px;
+}
+
+.add-form-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form-buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.add-input{
+    border: 1px solid var(--primary-dark);
+    border-radius: var(--radius-small);
+    padding: 8px;
+    margin-top: 4px;
+    width: 30vw;
+}
+
+.add-form-description .add-input {
+    height: 100%;
+}
 
 .hover:hover {
     color: var(--hover);
