@@ -6,35 +6,36 @@ function AddOffers() {
                 <div className="add-form-columns">
                     <div className="add-form-details">
                         <div className="add-form-detail">
-                            <label for="hotel-name">Hotel name:</label>
+                            <label>Hotel name:</label>
                             <input id="hotel-name" className="add-input"></input>
                         </div>
                         <br></br>
                         <div className="add-form-detail">
-                            <label for="hotel-location">Location:</label>
+                            <label>Location:</label>
                             <input id="hotel-location" className="add-input"></input>
                         </div>
                         <br></br>
                         <div className="add-form-detail">
-                            <label for="hotel-price">Price:</label>
+                            <label>Price:</label>
                             <input id="hotel-price" className="add-input"></input>
                         </div>
                         <br></br>
                         <div className="add-form-detail">
-                            <label for="hotel-category">Local category:</label>
+                            <label>Local category:</label>
                             <input id="hotel-category" className="add-input"></input>
                         </div>
                     </div>
                     <div className="add-form-description">
-                        <label for="hotel-description">Description:</label>
+                        <label>Description:</label>
                         <textarea id="hotel-description" className="add-input"></textarea>
                     </div>
                 </div>
                 <br></br>
                 <br></br>
+                <br></br>
                 <div className="add-form-buttons">
-                    <button className="button secondary">Cancel</button>
-                    <button className="button secondary">Add offer</button>
+                    <button type="reset" className="button secondary">Cancel</button>
+                    <button type="submit" className="button secondary">Add offer</button>
                 </div>
             </form>
         </section>

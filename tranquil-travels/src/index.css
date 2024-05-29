@@ -321,8 +321,67 @@ body{
     height: 100%;
 }
 
+/* modal */
+
+.modal {
+    background-color: var(--white);
+    border-radius: var(--radius-small);
+    border: none;
+    padding: 36px;
+    margin: auto;
+}
+
+.modal-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-left: 36px; */
+}
+
+/* .modal-text {
+    margin-left: 36px;
+} */
+
+.modal-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-mini-forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input {
+    padding: 8px;
+    border: 1px solid var(--primary-dark);
+    border-radius: var(--radius-small);
+    width: 50vw;
+}
+
+.modal-mini-input {
+    width: 15vw;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    column-gap: 16px;
+}
+
 .hover:hover {
     color: var(--hover);
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .bold{
