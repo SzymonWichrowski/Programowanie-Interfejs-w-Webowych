@@ -1,8 +1,31 @@
-function AddOffers() {
+import { useNavigate } from 'react-router-dom';
+import hotelsData from '../Data/hotelsData.js';
+
+function AddOffers({ addHotel }) {
+
+    const navigate = useNavigate();
+
+    const hotelCards = document.getElementById('hotel-cards');
+
+    const handleAddOffer = (event) => {
+
+        event.preventDefault();
+
+        const name = document.getElementById('hotel-name').value;
+        const location = document.getElementById('hotel-location').value;
+        const price = document.getElementById('hotel-price').value;
+        const rating = document.getElementById('hotel-category').value;
+        const description = document.getElementById('hotel-description').value;
+
+        // teraz tylko dodac dynamicznie komponent reactowy i to za pomoca formsa z innego widoku...
+
+        navigate(`/`);
+
+    }
 
     return(
         <section className="add-section">
-            <form className="add-form">
+            <form className="add-form" onSubmit={handleAddOffer}>
                 <div className="add-form-columns">
                     <div className="add-form-details">
                         <div className="add-form-detail">

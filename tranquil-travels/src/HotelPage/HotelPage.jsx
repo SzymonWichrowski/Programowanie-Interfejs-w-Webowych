@@ -1,31 +1,21 @@
 import Navbar from "../Navbar/Navbar.jsx";
 import Title from "../Title/Title.jsx";
 import EditModal from "../EditModal/EditModal.jsx";
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import hotels from '../Data/hotelsData.js'
 import {openModal} from '../scripts/modals.js'
+import { HotelContext } from "../Data/HotelProvider.jsx";
 
 function HotelPage() {
 
     const { id } = useParams();
+    const {hotels, updateHotel} = useContext(HotelContext);
     const [hotel, setHotel] = useState(hotels.find(hotel => hotel.id === id));
 
-    function handleHotelEdit(event) {
+    function handleHotelEdit(updatedHotel) {
 
-        const name = document.getElementById('hotel-name');
-        const location = document.getElementById('hotel-location');
-        const rating = document.getElementById('hotel-category');
-        const price = document.getElementById('hotel-price');
-        const description = document.getElementById('hotel-description');
-    
-        setHotel({...hotel, 
-                    hotel: name.value, 
-                    city: location.value, 
-                    rating: rating.value,
-                    price: price.value,
-                    description: description.value});
+        setHotel(updatedHotel);
+        updateHotel(updatedHotel);
     }
 
     useEffect(() => {
@@ -60,7 +50,7 @@ function HotelPage() {
                 </div>
             </div>
             </section>
-            <EditModal handleHotelEdit={handleHotelEdit}></EditModal>
+            <EditModal hotel={hotel} handleHotelEdit={handleHotelEdit}></EditModal>
         </>
     );
 }

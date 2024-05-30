@@ -13,8 +13,4 @@ Title.propTypes = {
     title: PropTypes.string,
 }
 
-Title.defaultProps = {
-    title: "Title",
-}
-
 export default Title

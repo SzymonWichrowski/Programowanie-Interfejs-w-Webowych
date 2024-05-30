@@ -1,13 +1,7 @@
 import {closeModal} from '../scripts/modals.js'
-import hotels from '../Data/hotelsData.js';
-import { useParams } from 'react-router-dom';
-import React from 'react';
-import { useState} from 'react';
+import React, {useState} from 'react';
 
-function EditModal({handleHotelEdit}) {
-
-    const { id } = useParams();
-    const hotel = hotels.find(hotel => hotel.id === id);
+function EditModal({hotel, handleHotelEdit}) {
 
     const [name, setName] = useState(hotel.hotel);
     const [location, setLocation] = useState(hotel.city);
@@ -15,8 +9,18 @@ function EditModal({handleHotelEdit}) {
     const [price, setPrice] = useState(hotel.price);
     const [description, setDescription] = useState(hotel.description);
 
-    function handleSave() {
-        handleHotelEdit();
+    function handleSubmit() {
+
+        const updatedHotel = {
+            ...hotel,
+            hotel: name, 
+            city: location, 
+            rating: rating,
+            price: price,
+            description: description
+        };
+
+        handleHotelEdit(updatedHotel);
         closeModal('edit-modal'); 
     }
 
@@ -58,7 +62,7 @@ function EditModal({handleHotelEdit}) {
             <br></br>
             <div className="modal-buttons">
                 <button type='reset' className='button primary' onClick={() => closeModal('edit-modal')}>Cancel</button>
-                <button type='submit' className='button primary' onClick={handleSave}>Edit</button>
+                <button type='submit' className='button primary' onClick={handleSubmit}>Edit</button>
             </div>
         </dialog>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HotelProvider from './Data/HotelProvider.jsx'
 import Navbar from './Navbar/Navbar.jsx'
 import Title from './Title/Title.jsx'
 import Browse from './Browse/Browse.jsx'
@@ -10,6 +11,7 @@ function App() {
 
   return(
     <>
+    <HotelProvider>
       <Router>
         <Navbar></Navbar>
         <Routes>
@@ -25,6 +27,9 @@ function App() {
           <Route path='/add-offers' element={<AddOffersPage/>} />
         </Routes>
       </Router>
+    </HotelProvider>
+
+      
     </>
   );
   
