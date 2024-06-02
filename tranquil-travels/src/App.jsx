@@ -6,30 +6,36 @@ import Title from './Title/Title.jsx'
 import Browse from './Browse/Browse.jsx'
 import HotelPage from './HotelPage/HotelPage.jsx';
 import AddOffersPage from './AddOffers/AddOffersPage.jsx';
+import HomePage from './HomePage/HomePage.jsx';
+import LoginModal from './LoginModal/LoginModal.jsx';
+import { AuthContextProvider } from './Context/AuthContext';
+import Protected from './Protected/Protected.jsx';
 
 function App() {
 
   return(
     <>
-    <HotelProvider>
-      <Router>
-        <Navbar></Navbar>
-        <Routes>
-          <Route exact path="/" 
-            element={
-              <>
-                <Title title="My offers"></Title>
-                <Browse></Browse>
-              </>
-            } 
-          />
-          <Route path="/hotel/:id" element={<HotelPage />} />
-          <Route path='/add-offers' element={<AddOffersPage/>} />
-        </Routes>
-      </Router>
-    </HotelProvider>
-
-      
+      <AuthContextProvider>
+        <HotelProvider>
+          <Router>
+            <Navbar></Navbar>
+            <Routes>
+              <Route exact path="/" 
+                element={
+                  <>
+                    <Title title="My offers"></Title>
+                    <Browse></Browse>
+                    <LoginModal></LoginModal>
+                  </>
+                } 
+              />
+              <Route path="/hotel/:id" element={<HotelPage />} />
+              <Route path='/add-offers' element={<AddOffersPage />} />
+              <Route path='/home' element={<Protected> <HomePage /></Protected>}></Route>
+            </Routes>
+          </Router>
+        </HotelProvider>
+      </AuthContextProvider>
     </>
   );
   

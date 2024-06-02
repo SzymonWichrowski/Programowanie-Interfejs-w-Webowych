@@ -1,3 +1,4 @@
+import LoginModal from "../LoginModal/LoginModal.jsx";
 import Navbar from "../Navbar/Navbar.jsx";
 import Title from "../Title/Title.jsx";
 import AddOffers from "./AddOffers.jsx";
@@ -14,7 +15,8 @@ function AddOffersPage() {
         <>
             <Navbar></Navbar>
             <Title title='Add new offers'></Title>
-            <AddOffers></AddOffers> 
+            <AddOffers></AddOffers>
+            <LoginModal></LoginModal>
         </>
 
         

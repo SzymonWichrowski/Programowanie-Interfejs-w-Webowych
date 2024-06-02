@@ -376,12 +376,21 @@ body{
     column-gap: 16px;
 }
 
+.google-button {
+    display: flex;
+    justify-content: center;
+}
+
 .hover:hover {
     color: var(--hover);
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.text {
+    margin-left: 64px;
 }
 
 .bold{

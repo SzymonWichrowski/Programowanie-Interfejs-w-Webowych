@@ -5,6 +5,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {openModal} from '../scripts/modals.js'
 import { HotelContext } from "../Data/HotelProvider.jsx";
+import LoginModal from "../LoginModal/LoginModal.jsx";
 
 function HotelPage() {
 
@@ -51,6 +52,7 @@ function HotelPage() {
             </div>
             </section>
             <EditModal hotel={hotel} handleHotelEdit={handleHotelEdit}></EditModal>
+            <LoginModal></LoginModal>
         </>
     );
 }
