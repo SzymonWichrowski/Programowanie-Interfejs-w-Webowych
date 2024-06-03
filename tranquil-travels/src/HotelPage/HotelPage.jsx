@@ -32,7 +32,7 @@ function HotelPage() {
             <Navbar></Navbar>
             <Title title={hotel.hotel}></Title>
             <section className="hotel-page-section grid">
-            <div className="hotel-image-large-container"><img src={hotel.image} alt="hotel image" className="hotel-image-large"/></div>
+            <div className="hotel-image-large-container"><img src={hotel.imagePath} alt="hotel image" className="hotel-image-large"/></div>
             <div className="hotel-page-details">
                 <div className="hotel-page-info">
                     <p className="text-small"><span className="bold">Location:</span> {hotel.city}</p>
@@ -46,8 +46,8 @@ function HotelPage() {
                     <button className="button primary">Remove <img src="/trash.svg"></img></button>
                 </div>
                 <div className="hotel-page-images">
-                    <div className=".hotel-page-image-container"><img src={hotel.image} alt="hotel image" className="hotel-page-image"/></div>
-                    <div className=".hotel-page-image-container"><img src={hotel.image} alt="hotel image" className="hotel-page-image"/></div>
+                    <div className=".hotel-page-image-container"><img src={hotel.imagePath} alt="hotel image" className="hotel-page-image"/></div>
+                    <div className=".hotel-page-image-container"><img src={hotel.imagePath} alt="hotel image" className="hotel-page-image"/></div>
                 </div>
             </div>
             </section>
