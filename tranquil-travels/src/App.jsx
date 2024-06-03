@@ -10,6 +10,7 @@ import HomePage from './HomePage/HomePage.jsx';
 import LoginModal from './LoginModal/LoginModal.jsx';
 import { AuthContextProvider } from './Context/AuthContext';
 import Protected from './Protected/Protected.jsx';
+import SignupPage from './Signup/SignupPage.jsx';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
               <Route path="/hotel/:id" element={<HotelPage />} />
               <Route path='/add-offers' element={<AddOffersPage />} />
               <Route path='/home' element={<Protected> <HomePage /></Protected>}></Route>
+              <Route path='/signup' element={<SignupPage />}></Route>
             </Routes>
           </Router>
         </HotelProvider>

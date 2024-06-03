@@ -321,6 +321,38 @@ body{
     height: 100%;
 }
 
+/* signup */
+
+.signup-forms {
+    background-color: var(--neutral);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-input {
+    border: 1px solid var(--primary-dark);
+    border-radius: var(--radius-small);
+    padding: 8px;
+    margin-top: 4px;
+    width: 40vw;
+}
+
+.signup-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+
+
 /* modal */
 
 .modal {
